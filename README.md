@@ -14,6 +14,6 @@ will run the gdb debugger, gdbinit should be renamed to .gdbiinit
 make ocd:- 
 will run openocd, u74.cfg is the configuration file
 
-There may still be a dependancy on the flash code.
-If this example crashes at entry.S line "csrw mtvec, t0"
-Then restart the board and press return to stop at the uboot prompt.
+update
+03_02_2023:
+removed __metal_chicken_bit test as this often crashed from a cold boot.

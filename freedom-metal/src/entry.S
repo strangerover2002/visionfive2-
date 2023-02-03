@@ -23,7 +23,7 @@ _enter:
 .option norelax
     la gp, __global_pointer$
 .option pop
-
+#if 0
     /* trap over the chicken bit register clearing, aloe & fe310 dont have it */
     la t0, 1f
     csrw mtvec, t0
@@ -32,6 +32,7 @@ _enter:
     beqz t0, 1f
     /* If set, always clear the feature disable register for all cores series */
     csrwi 0x7C1, 0
+    #endif
 .align 4
 1:
     /* Set up a simple trap vector to catch anything that goes wrong early in
