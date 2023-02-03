@@ -112,6 +112,13 @@ int main( void )
 	const char * const pcMessage = "FreeRTOS Demo start\r\n";
 	const char * const pcMessageEnd = "FreeRTOS Demo end\r\n";
 
+	/*uart0 tx*/
+	SYS_IOMUX_DOEN(5, LOW);
+	SYS_IOMUX_DOUT(5, 20);
+	/*uart0 rx*/
+	SYS_IOMUX_DOEN(6, HIGH);
+	SYS_IOMUX_DIN(6, 14);
+
 	prvSetupHardware();
 	write( STDOUT_FILENO, pcMessage, strlen( pcMessage ) );
 	FreeRTOS_init();
