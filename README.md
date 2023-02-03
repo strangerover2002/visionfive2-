@@ -2,7 +2,7 @@
 
 The make and source files have only been tested from a Linux host.
 
-Using SiFive toolcahin https://github.com/sifive/freedom-tools/releases
+Using SiFive toolchain https://github.com/sifive/freedom-tools/releases
 riscv64-unknown-elf-toolchain-10.2.0-2020.12.8-x86_64-linux-centos6.tar.gz
 
 make all:- 
